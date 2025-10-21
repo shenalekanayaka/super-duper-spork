@@ -1,0 +1,35 @@
+Type,Name,Workers_Needed,Track_Frequency
+Process,SIFTING I,1,No
+Process,SIFTING II,1,No
+Process,WEIGHING I,2,Yes
+Process,WEIGHING II,2,Yes
+Process,CLOSE T - DRUMS / FBD-OLD,4,Yes
+Process,CLOSE T - DRUMS / FBD-NEW,4,Yes
+Process,MILL & BLEND / WASH - 1500L,2,No
+Process,WEIGH & BLEND / WASH - 1100L,2,No
+Process,MILL & BLEND / WASH - 650L,2,No
+Process,Transfer to T-Drum/Weigh,2,No
+Process,WEIGING/BLEND,2,No
+Process,OSCILATIONG/BLENDING,2,No
+Machine,HT-2054-TAB 1,1,No
+Machine,HT-2055-TAB 2,2,No
+Machine,HT-2056-TAB 3,1,No
+Machine,HT-2057-TAB 4,2,No
+Machine,HT-2058-TAB 5,1,No
+Machine,KORSCH-TAB 6,2,No
+Machine,128-001,1,No
+Machine,129-001,1,No
+Machine,130-001[opposite to 1100L],1,No
+Machine,GKF-3005,2,No
+Machine,132-001,1,No
+Machine,ST-49,1,No
+Machine,GCM-350,1,No
+Machine,FREUND HI-COATER,1,No
+Process,Coating Materials Weighing (GCM/FHC),1,No
+Process,Coating Solution Preparation (GCM/FHC),1,No
+Process,Binder Solution Preparation - OLD FBD,1,No
+Process,Binder Solution Preparation - NEW FBD,1,No
+Process,Packaging Preparation,1,No
+Process,Sorting ELMA 100,1,No
+Process,Temp/Humidity Reading(9AM) + In-process room cleaning + Machine usage file check,1,No
+Process,"Temp/Humidity Reading (3PM), Cleaning/File Arranging",1,No

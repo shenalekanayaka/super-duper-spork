@@ -1,0 +1,51 @@
+[
+    {
+        "id": "20251021123415960228",
+        "timestamp": "2025-10-21 12:34:15",
+        "change_type": "ALLOCATION_CREATED",
+        "allocation_date": "2025-10-20",
+        "shift_time": "Morning",
+        "user": "Admin",
+        "details": {
+            "processes_allocated": 1,
+            "machines_allocated": 1,
+            "total_workers_assigned": 0,
+            "unassigned_workers": 46,
+            "group": "Group A"
+        }
+    },
+    {
+        "id": "20251021123418305555",
+        "timestamp": "2025-10-21 12:34:18",
+        "change_type": "ALLOCATION_EDITED",
+        "allocation_date": "2025-10-20",
+        "shift_time": "Morning",
+        "user": "Admin",
+        "details": {
+            "allocations_count": 2,
+            "allocations": {
+                "WEIGHING I": 2,
+                "HT-2058-TAB 5": 2
+            },
+            "total_assigned_workers": 4,
+            "unassigned_workers_count": 46,
+            "overtime_workers": 0,
+            "temp_workers": 0
+        }
+    },
+    {
+        "id": "20251021123418333862",
+        "timestamp": "2025-10-21 12:34:18",
+        "change_type": "ALLOCATION_CREATED",
+        "allocation_date": "2025-10-20",
+        "shift_time": "Morning",
+        "user": "Admin",
+        "details": {
+            "processes_allocated": 1,
+            "machines_allocated": 1,
+            "total_workers_assigned": 0,
+            "unassigned_workers": 46,
+            "group": "Group A"
+        }
+    }
+]
