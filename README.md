@@ -21,3 +21,13 @@ pyinstaller --noconfirm --clean --name "Worker Allocation System" --add-data "ut
 ```
 
 The resulting executable will also be in the `dist/Worker Allocation System/` folder.
+
+## Building from the Spec File
+
+If you have a generated spec file and prefer to build from it (for example after customizing options), run:
+
+```bash
+pyinstaller --noconfirm --clean ".\Worker Allocation System.spec"
+```
+
+This will produce the same output in `dist/Worker Allocation System/` based on the spec configuration.
