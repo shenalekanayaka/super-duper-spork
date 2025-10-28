@@ -1,0 +1,760 @@
+{
+    "metadata": {
+        "date": "2025-11-03",
+        "shift_time": "Morning",
+        "shift_group": "Group A",
+        "exported_at": "2025-10-28 10:06:22"
+    },
+    "processes": [
+        {
+            "name": "SIFTING I",
+            "product": "Cetirizine Tablets BP 10 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Nilan",
+                    "display_name": "Nilan",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "SIFTING II",
+            "product": "Carbamazepine Tablets BP 200 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Anuja",
+                    "display_name": "Anuja",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "WEIGHING I",
+            "product": "Cetirizine Tablets BP 10 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Deeparatne",
+                    "display_name": "Deeparatne",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Dewmin",
+                    "display_name": "Dewmin",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 2
+        },
+        {
+            "name": "WEIGHING II",
+            "product": "Bisoprolol Tablets BP 5 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Nayana",
+                    "display_name": "Nayana",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Theja",
+                    "display_name": "Theja",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 2
+        },
+        {
+            "name": "CLOSE T - DRUMS / FBD-OLD",
+            "product": "Benzhexol Tablets BP 2 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Savinda",
+                    "display_name": "Savinda",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Manoj",
+                    "display_name": "Manoj",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Indrajith",
+                    "display_name": "Indrajith",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Sanoj",
+                    "display_name": "Sanoj",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 4
+        },
+        {
+            "name": "CLOSE T - DRUMS / FBD-NEW",
+            "product": "Chloroquine Phosphate Tablets USP 250 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Bandara",
+                    "display_name": "Bandara",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Kulshan",
+                    "display_name": "Kulshan",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Vehan",
+                    "display_name": "Vehan",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Sanjeewani",
+                    "display_name": "Sanjeewani",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 4
+        },
+        {
+            "name": "MILL & BLEND / WASH - 1500L",
+            "product": "Bisoprolol Tablets BP 5 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Dineth",
+                    "display_name": "Dineth",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Denuwan",
+                    "display_name": "Denuwan",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 2
+        },
+        {
+            "name": "WEIGH & BLEND / WASH - 1100L",
+            "product": "Bisoprolol Tablets BP 5 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Wasantha",
+                    "display_name": "Wasantha",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Lalinda",
+                    "display_name": "Lalinda",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 2
+        },
+        {
+            "name": "MILL & BLEND / WASH - 650L",
+            "product": "Atorvastatin Tablets IP 10 mg (Blister)",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Prasad",
+                    "display_name": "Prasad",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Dinushka",
+                    "display_name": "Dinushka",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 2
+        },
+        {
+            "name": "Transfer to T-Drum/Weigh",
+            "product": "Benzhexol Tablets BP 2 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Wasitha",
+                    "display_name": "Wasitha",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Ranjaya",
+                    "display_name": "Ranjaya",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 2
+        },
+        {
+            "name": "WEIGING/BLEND",
+            "product": "Bisoprolol Tablets BP 5 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Shenal",
+                    "display_name": "Shenal",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Lasanthi W",
+                    "display_name": "Lasanthi W",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 2
+        },
+        {
+            "name": "OSCILATIONG/BLENDING",
+            "product": "Benzhexol Tablets BP 2 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Theja",
+                    "display_name": "Theja",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Anuja",
+                    "display_name": "Anuja",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 2
+        },
+        {
+            "name": "Coating Materials Weighing (GCM/FHC)",
+            "product": "Aluminium Hydroxide Tablets BP 500 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Lasanthi W",
+                    "display_name": "Lasanthi W",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "Coating Solution Preparation (GCM/FHC)",
+            "product": "Cetirizine Tablets BP 10 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Bandara",
+                    "display_name": "Bandara",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "Binder Solution Preparation - OLD FBD",
+            "product": "Bisoprolol Tablets BP 5 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Vehan",
+                    "display_name": "Vehan",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "Binder Solution Preparation - NEW FBD",
+            "product": "Carbamazepine Tablets BP 200 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Awantha",
+                    "display_name": "Awantha",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "Packaging Preparation",
+            "product": "Benzhexol Tablets BP 2 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Manoj",
+                    "display_name": "Manoj",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "Sorting ELMA 100",
+            "product": "Atorvastatin Tablets IP 10 mg (Blister)",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Sanjeewani",
+                    "display_name": "Sanjeewani",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "Temp/Humidity Reading(9AM) + In-process room cleaning + Machine usage file check",
+            "product": "Cetirizine Tablets BP 10 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Hirushan",
+                    "display_name": "Hirushan",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "Temp/Humidity Reading (3PM), Cleaning/File Arranging",
+            "product": "Benzhexol Tablets BP 2 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Upul",
+                    "display_name": "Upul",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        }
+    ],
+    "machines": [
+        {
+            "name": "HT-2054-TAB 1",
+            "product": "Atorvastatin Tablets IP 20 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Priyangika",
+                    "display_name": "Priyangika",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "HT-2055-TAB 2",
+            "product": "Benzhexol Tablets BP 2 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Deeparatne",
+                    "display_name": "Deeparatne",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Isuru",
+                    "display_name": "Isuru",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 2
+        },
+        {
+            "name": "HT-2056-TAB 3",
+            "product": "Atorvastatin Tablets IP 10 mg (Blister)",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Rathnayake",
+                    "display_name": "Rathnayake",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "HT-2057-TAB 4",
+            "product": "Benzhexol Tablets BP 2 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Awantha",
+                    "display_name": "Awantha",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Warunika",
+                    "display_name": "Warunika",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 2
+        },
+        {
+            "name": "HT-2058-TAB 5",
+            "product": "Benzhexol Tablets BP 2 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Kumara",
+                    "display_name": "Kumara",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "KORSCH-TAB 6",
+            "product": "Atorvastatin Tablets IP 10 mg (Blister)",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Janaka",
+                    "display_name": "Janaka",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Lasith",
+                    "display_name": "Lasith",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 2
+        },
+        {
+            "name": "128-001",
+            "product": "Bisoprolol Tablets BP 5 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Nuwan",
+                    "display_name": "Nuwan",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "129-001",
+            "product": "Atorvastatin Tablets IP 20 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Gayan",
+                    "display_name": "Gayan",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "130-001[opposite to 1100L]",
+            "product": "Bisoprolol Tablets BP 5 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Janaka",
+                    "display_name": "Janaka",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "GKF-3005",
+            "product": "Benzhexol Tablets BP 2 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Warunika",
+                    "display_name": "Warunika",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "132-001",
+            "product": "Chloroquine Phosphate Tablets USP 250 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Prasad",
+                    "display_name": "Prasad",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "ST-49",
+            "product": "Benzhexol Tablets BP 2 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Kulshan",
+                    "display_name": "Kulshan",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "GCM-350",
+            "product": "Cetirizine Tablets BP 10 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Indrajith",
+                    "display_name": "Indrajith",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "FREUND HI-COATER",
+            "product": "Atorvastatin Tablets IP 10 mg (Blister)",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Isuru",
+                    "display_name": "Isuru",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        }
+    ],
+    "unassigned_workers": [
+        {
+            "name": "Akhil",
+            "display_name": "Akhil",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Chandima",
+            "display_name": "Chandima",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Denuwan",
+            "display_name": "Denuwan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Dewmin",
+            "display_name": "Dewmin",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Didula",
+            "display_name": "Didula",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Dinesh",
+            "display_name": "Dinesh",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Dineth",
+            "display_name": "Dineth",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Dinushka",
+            "display_name": "Dinushka",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Dulanjaya",
+            "display_name": "Dulanjaya",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Gayan",
+            "display_name": "Gayan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Harindra",
+            "display_name": "Harindra",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Hemantha",
+            "display_name": "Hemantha",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Hirushan",
+            "display_name": "Hirushan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Kaushalya",
+            "display_name": "Kaushalya",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Lalinda",
+            "display_name": "Lalinda",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Nayana",
+            "display_name": "Nayana",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Nilan",
+            "display_name": "Nilan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Nimali",
+            "display_name": "Nimali",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Pawan",
+            "display_name": "Pawan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Rathnayake",
+            "display_name": "Rathnayake",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Ravindu",
+            "display_name": "Ravindu",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Roshan",
+            "display_name": "Roshan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Sanoj",
+            "display_name": "Sanoj",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Savinda",
+            "display_name": "Savinda",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Thiwanka",
+            "display_name": "Thiwanka",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Thushara",
+            "display_name": "Thushara",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Upul",
+            "display_name": "Upul",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Wasantha",
+            "display_name": "Wasantha",
+            "is_overtime": false,
+            "is_temp": false
+        }
+    ]
+}
