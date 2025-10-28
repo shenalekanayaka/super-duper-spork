@@ -283,6 +283,7 @@
         }
     },
     {
+<<<<<<< HEAD
         "id": "20251028104047922095",
         "timestamp": "2025-10-28 10:40:47",
         "change_type": "ALLOCATION_CREATED",
@@ -295,6 +296,65 @@
             "total_workers_assigned": 0,
             "unassigned_workers": 33,
             "group": "Group B"
+=======
+        "id": "20251028100622400246",
+        "timestamp": "2025-10-28 10:06:22",
+        "change_type": "ALLOCATION_CREATED",
+        "allocation_date": "2025-11-03",
+        "shift_time": "Morning",
+        "user": "Admin",
+        "details": {
+            "processes_allocated": 20,
+            "machines_allocated": 14,
+            "total_workers_assigned": 0,
+            "unassigned_workers": 28,
+            "group": "Group A"
+        }
+    },
+    {
+        "id": "20251028101233036822",
+        "timestamp": "2025-10-28 10:12:33",
+        "change_type": "ALLOCATION_CREATED",
+        "allocation_date": "2025-11-02",
+        "shift_time": "Morning",
+        "user": "Admin",
+        "details": {
+            "processes_allocated": 14,
+            "machines_allocated": 12,
+            "total_workers_assigned": 0,
+            "unassigned_workers": 11,
+            "group": "Group A"
+        }
+    },
+    {
+        "id": "20251028101337374685",
+        "timestamp": "2025-10-28 10:13:37",
+        "change_type": "ALLOCATION_CREATED",
+        "allocation_date": "2025-11-02",
+        "shift_time": "Morning",
+        "user": "Admin",
+        "details": {
+            "processes_allocated": 14,
+            "machines_allocated": 12,
+            "total_workers_assigned": 0,
+            "unassigned_workers": 11,
+            "group": "Group A"
+        }
+    },
+    {
+        "id": "20251028101751537020",
+        "timestamp": "2025-10-28 10:17:51",
+        "change_type": "ALLOCATION_CREATED",
+        "allocation_date": "2025-11-02",
+        "shift_time": "Morning",
+        "user": "Admin",
+        "details": {
+            "processes_allocated": 14,
+            "machines_allocated": 12,
+            "total_workers_assigned": 0,
+            "unassigned_workers": 11,
+            "group": "Group A"
+>>>>>>> 88ab1b90c654c4dbbbfc1a629d0801d2196174ab
         }
     }
 ]

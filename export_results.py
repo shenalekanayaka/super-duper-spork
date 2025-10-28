@@ -6,12 +6,13 @@ from datetime import datetime
 
 import json
 
-from reportlab.lib.pagesizes import A3, A4
+from reportlab.lib.pagesizes import letter, A4 , A3
 from reportlab.lib import colors
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
 from reportlab.lib.enums import TA_CENTER, TA_LEFT
+from reportlab.platypus import Paragraph
 
 
 class ResultsExporter:
@@ -283,21 +284,22 @@ class ResultsExporter:
                 lot_number = self.state.get_lot_number_for_allocation(process_name) or "N/A"
                 worker_names = ", ".join([self.state.get_worker_display_name(w) for w in workers])
                 
+                # Create wrapped Paragraphs for long text
                 data.append([
-                    process_name,
-                    product,
-                    lot_number,
-                    worker_names,
-                    str(len(workers))
+                    Paragraph(process_name, styles['Normal']),
+                    Paragraph(product, styles['Normal']),
+                    Paragraph(lot_number, styles['Normal']),
+                    Paragraph(worker_names, styles['Normal']),
+                    Paragraph(str(len(workers)), styles['Normal'])
                 ])
         
         # Create table
-        table = Table(data, colWidths=[1.5*inch, 2.3*inch, 1*inch, 2*inch, 0.6*inch])
+        table = Table(data, colWidths=[2.5*inch, 3.5*inch, 1*inch, 3.5*inch, 0.6*inch])
         
         # Style the table
         table.setStyle(TableStyle([
             # Header row styling
-            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#3498db')),
+            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor("#34db98")),
             ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
             ('ALIGN', (0, 0), (-1, 0), 'CENTER'),
             ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
@@ -343,17 +345,19 @@ class ResultsExporter:
                 product = self.state.get_product_for_allocation(machine_name) or "N/A"
                 lot_number = self.state.get_lot_number_for_allocation(machine_name) or "N/A"
                 worker_names = ", ".join([self.state.get_worker_display_name(w) for w in workers])
-                
+
+                # Create wrapped Paragraphs for long text
                 data.append([
-                    machine_name,  # ← Changed from process_name
-                    product,
-                    lot_number,
-                    worker_names,
-                    str(len(workers))
+                    Paragraph(machine_name, styles['Normal']),
+                    Paragraph(product, styles['Normal']),
+                    Paragraph(lot_number, styles['Normal']),
+                    Paragraph(worker_names, styles['Normal']),
+                    Paragraph(str(len(workers)), styles['Normal'])
                 ])
+
         
         # Create table
-        table = Table(data, colWidths=[1.5*inch, 2.3*inch, 1*inch, 2*inch, 0.6*inch])
+        table = Table(data, colWidths=[2.5*inch, 3.5*inch, 1*inch, 3.5*inch, 0.6*inch])
         
         # Style the table (purple header for machines)
         table.setStyle(TableStyle([
@@ -403,7 +407,7 @@ class ResultsExporter:
                 'Unassigned',
                 parent=styles['Normal'],
                 fontSize=10,
-                textColor=colors.HexColor('#e74c3c'),
+                textColor=colors.HexColor("#c0c059"),
                 leftIndent=20,
                 rightIndent=20
             )

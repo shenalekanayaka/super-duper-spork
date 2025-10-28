@@ -1,0 +1,210 @@
+{
+    "metadata": {
+        "date": "2025-10-28",
+        "shift_time": "Evening",
+        "shift_group": "Group B",
+        "exported_at": "2025-10-28 10:40:47"
+    },
+    "processes": [],
+    "machines": [],
+    "unassigned_workers": [
+        {
+            "name": "Ajith",
+            "display_name": "Ajith",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Chanaka",
+            "display_name": "Chanaka",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Chandu",
+            "display_name": "Chandu",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Chithra",
+            "display_name": "Chithra",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Danindu",
+            "display_name": "Danindu (Temp)",
+            "is_overtime": false,
+            "is_temp": true
+        },
+        {
+            "name": "Deshan",
+            "display_name": "Deshan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Deshapriya",
+            "display_name": "Deshapriya",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Gihan",
+            "display_name": "Gihan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Hasindu",
+            "display_name": "Hasindu",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Helen",
+            "display_name": "Helen (Temp)",
+            "is_overtime": false,
+            "is_temp": true
+        },
+        {
+            "name": "Isika",
+            "display_name": "Isika",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Jayalal",
+            "display_name": "Jayalal",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Jayatissa",
+            "display_name": "Jayatissa",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Kalum",
+            "display_name": "Kalum",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Kulith",
+            "display_name": "Kulith (Temp)",
+            "is_overtime": false,
+            "is_temp": true
+        },
+        {
+            "name": "Kushan",
+            "display_name": "Kushan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Nayanjith",
+            "display_name": "Nayanjith",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Nimal",
+            "display_name": "Nimal",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Nisal",
+            "display_name": "Nisal",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Pinsara",
+            "display_name": "Pinsara",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Prasanna",
+            "display_name": "Prasanna",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Ramanayaka",
+            "display_name": "Ramanayaka",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Rukmal",
+            "display_name": "Rukmal",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Sagara",
+            "display_name": "Sagara",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Sajith",
+            "display_name": "Sajith",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Saman",
+            "display_name": "Saman",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Shirantha",
+            "display_name": "Shirantha",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Sisira",
+            "display_name": "Sisira",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Sri Kantha",
+            "display_name": "Sri Kantha",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Sumith",
+            "display_name": "Sumith",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Susantha",
+            "display_name": "Susantha",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Tharaka",
+            "display_name": "Tharaka",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Tharanga",
+            "display_name": "Tharanga",
+            "is_overtime": false,
+            "is_temp": false
+        }
+    ]
+}
