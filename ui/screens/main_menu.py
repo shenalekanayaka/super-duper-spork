@@ -67,7 +67,16 @@ class MainMenuScreen(BaseScreen):
         grid_frame = tk.Frame(scrollable_frame, bg="#f0f0f0")
         grid_frame.pack(padx=5, pady=5)
         
-        for idx, process_data in enumerate(self.state.PROCESSES):
+        # Sort processes: unfilled first, then filled
+        sorted_processes = sorted(
+            self.state.PROCESSES,
+            key=lambda p: (
+                bool(self.state.allocations.get(p[0], [])),  # False (unfilled) sorts before True (filled)
+                p[0]  # Then sort alphabetically by name
+            )
+        )
+
+        for idx, process_data in enumerate(sorted_processes):
             process_name = process_data[0]
             slots = process_data[1]
             row = idx // 3
@@ -110,7 +119,16 @@ class MainMenuScreen(BaseScreen):
         grid_frame = tk.Frame(scrollable_frame, bg="#f0f0f0")
         grid_frame.pack(padx=5, pady=5)
         
-        for idx, machine_data in enumerate(self.state.compression_machines):
+        # Sort machines: unfilled first, then filled
+        sorted_machines = sorted(
+            self.state.compression_machines,
+            key=lambda m: (
+                bool(self.state.allocations.get(m[0], [])),  # False (unfilled) sorts before True (filled)
+                m[0]  # Then sort alphabetically by name
+            )
+        )
+
+        for idx, machine_data in enumerate(sorted_machines):
             machine_name = machine_data[0]
             slots = machine_data[1]
             row = idx // 3

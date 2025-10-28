@@ -19,7 +19,7 @@ class EditAllocationDialog:
         """Show edit dialog and return True if changes were made"""
         self.dialog = tk.Toplevel(self.parent)
         self.dialog.title(f"Edit: {self.allocation_name}")
-        self.dialog.geometry("600x600")
+        self.dialog.geometry("600x650")  # Increased height
         self.dialog.resizable(False, False)
         self.dialog.configure(bg="#f0f0f0")
         
@@ -117,13 +117,6 @@ class EditAllocationDialog:
         # Populate listbox with all workers
         all_workers = set(current_workers) | set(self.state.available_workers)
         if hasattr(self.state, 'all_shift_workers'):
-            # If we have access to all shift workers, use that
-            all_workers = self.state.all_shift_workers
-        
-        # Populate listbox with all workers
-        all_workers = set(current_workers) | set(self.state.available_workers)
-
-        if hasattr(self.state, 'all_shift_workers'):
             all_workers = self.state.all_shift_workers
 
         self.worker_list = sorted(all_workers)
@@ -135,9 +128,6 @@ class EditAllocationDialog:
             # Select currently assigned workers
             if worker in current_workers:
                 self.workers_listbox.selection_set(idx)
-
-
-
         
         # Instructions
         instructions = tk.Label(
@@ -149,9 +139,9 @@ class EditAllocationDialog:
         )
         instructions.pack(pady=5)
         
-        # Buttons
+        # Buttons at BOTTOM - pack with side=BOTTOM
         button_frame = tk.Frame(self.dialog, bg="#f0f0f0")
-        button_frame.pack(pady=20)
+        button_frame.pack(side=tk.BOTTOM, pady=20, fill=tk.X)
         
         save_btn = tk.Button(
             button_frame,
@@ -163,7 +153,7 @@ class EditAllocationDialog:
             command=self.save_changes,
             cursor="hand2"
         )
-        save_btn.pack(side=tk.LEFT, padx=10, pady=15, ipady=10)  # ADD pady and ipady
+        save_btn.pack(side=tk.LEFT, padx=10, pady=5, ipady=10)
         
         cancel_btn = tk.Button(
             button_frame,
@@ -175,13 +165,13 @@ class EditAllocationDialog:
             command=self.cancel,
             cursor="hand2"
         )
-        cancel_btn.pack(side=tk.LEFT, padx=10, pady=15, ipady=10)
+        cancel_btn.pack(side=tk.LEFT, padx=10, pady=5, ipady=10)
         
         # Wait for dialog to close
         self.parent.wait_window(self.dialog)
         
         return self.result
-    
+
     def save_changes(self):
         """Save changes to the allocation"""
         # Get selected workers

@@ -20,7 +20,7 @@ class StartScreen(BaseScreen):
             bg="#f0f0f0",
             fg="#2c3e50"
         )
-        title.pack(pady=40)
+        title.pack(pady=20)
         
         subtitle = tk.Label(
             center_frame,
@@ -29,7 +29,7 @@ class StartScreen(BaseScreen):
             bg="#f0f0f0",
             fg="#7f8c8d"
         )
-        subtitle.pack(pady=20)
+        subtitle.pack(pady=10)
         
 
         if self.state.selected_date and self.state.shift_time:
@@ -71,7 +71,7 @@ class StartScreen(BaseScreen):
             height=2,
             command=lambda: self.app.show_screen('date_shift')
         )
-        back_btn.pack(pady=20)
+        back_btn.pack(pady=10)
         # ↑↑↑ END OF ADDITION
     
     def select_group(self, group):

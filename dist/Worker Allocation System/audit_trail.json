@@ -1,0 +1,82 @@
+[
+    {
+        "id": "20251022110648525742",
+        "timestamp": "2025-10-22 11:06:48",
+        "change_type": "ALLOCATION_CREATED",
+        "allocation_date": "2025-10-21",
+        "shift_time": "Morning",
+        "user": "Admin",
+        "details": {
+            "processes_allocated": 2,
+            "machines_allocated": 1,
+            "total_workers_assigned": 0,
+            "unassigned_workers": 43,
+            "group": "Group A"
+        }
+    },
+    {
+        "id": "20251022133032734037",
+        "timestamp": "2025-10-22 13:30:32",
+        "change_type": "ALLOCATION_CREATED",
+        "allocation_date": "2025-10-22",
+        "shift_time": "Morning",
+        "user": "Admin",
+        "details": {
+            "processes_allocated": 1,
+            "machines_allocated": 1,
+            "total_workers_assigned": 0,
+            "unassigned_workers": 45,
+            "group": "Group A"
+        }
+    },
+    {
+        "id": "20251022133246275838",
+        "timestamp": "2025-10-22 13:32:46",
+        "change_type": "ALLOCATION_CREATED",
+        "allocation_date": "2025-10-21",
+        "shift_time": "Morning",
+        "user": "Admin",
+        "details": {
+            "processes_allocated": 2,
+            "machines_allocated": 1,
+            "total_workers_assigned": 0,
+            "unassigned_workers": 43,
+            "group": "Group A"
+        }
+    },
+    {
+        "id": "20251022133250205194",
+        "timestamp": "2025-10-22 13:32:50",
+        "change_type": "ALLOCATION_EDITED",
+        "allocation_date": "2025-10-21",
+        "shift_time": "Morning",
+        "user": "Admin",
+        "details": {
+            "allocations_count": 3,
+            "allocations": {
+                "WEIGHING I": 2,
+                "CLOSE T - DRUMS / FBD-NEW": 4,
+                "128-001": 1
+            },
+            "total_assigned_workers": 7,
+            "unassigned_workers_count": 43,
+            "overtime_workers": 0,
+            "temp_workers": 0
+        }
+    },
+    {
+        "id": "20251022133250207480",
+        "timestamp": "2025-10-22 13:32:50",
+        "change_type": "ALLOCATION_CREATED",
+        "allocation_date": "2025-10-21",
+        "shift_time": "Morning",
+        "user": "Admin",
+        "details": {
+            "processes_allocated": 2,
+            "machines_allocated": 1,
+            "total_workers_assigned": 0,
+            "unassigned_workers": 43,
+            "group": "Group A"
+        }
+    }
+]

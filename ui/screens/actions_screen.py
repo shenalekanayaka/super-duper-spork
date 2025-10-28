@@ -13,7 +13,7 @@ class ActionsScreen(BaseScreen):
     
     def show(self, **kwargs):
         title = self.create_title("Additional Actions", 26)
-        title.pack(pady=40)
+        title.pack(pady=20)
         
         subtitle = self.create_subtitle("Add Shift Swaps, Overtime, or Temporary Workers")
         subtitle.pack(pady=10)

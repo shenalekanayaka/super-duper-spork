@@ -1,0 +1,372 @@
+{
+    "metadata": {
+        "date": "2025-10-24",
+        "shift_time": "Morning",
+        "shift_group": "Group A",
+        "exported_at": "2025-10-24 14:00:59"
+    },
+    "processes": [
+        {
+            "name": "WEIGHING I",
+            "product": "Cetirizine Tablets BP 10 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Didula",
+                    "display_name": "Didula",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Jayatissa",
+                    "display_name": "Jayatissa (OT)",
+                    "is_overtime": true,
+                    "is_temp": false
+                },
+                {
+                    "name": "Shirantha",
+                    "display_name": "Shirantha (OT)",
+                    "is_overtime": true,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 3
+        },
+        {
+            "name": "Binder Solution Preparation - OLD FBD",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Thiwanka",
+                    "display_name": "Thiwanka",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "Binder Solution Preparation - NEW FBD",
+            "product": "Cetirizine Tablets BP 10 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Wasantha",
+                    "display_name": "Wasantha",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        }
+    ],
+    "machines": [
+        {
+            "name": "KORSCH-TAB 6",
+            "product": "Atorvastatin Tablets IP 10 mg (Blister)",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Awantha",
+                    "display_name": "Awantha",
+                    "is_overtime": false,
+                    "is_temp": false
+                },
+                {
+                    "name": "Didula",
+                    "display_name": "Didula",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 2
+        },
+        {
+            "name": "128-001",
+            "product": "Cetirizine Tablets BP 10 mg",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Deeparatne",
+                    "display_name": "Deeparatne",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        }
+    ],
+    "unassigned_workers": [
+        {
+            "name": "Akhil",
+            "display_name": "Akhil",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Anuja",
+            "display_name": "Anuja",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Bandara",
+            "display_name": "Bandara",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Chandima",
+            "display_name": "Chandima",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Denuwan",
+            "display_name": "Denuwan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Deshan",
+            "display_name": "Deshan (OT)",
+            "is_overtime": true,
+            "is_temp": false
+        },
+        {
+            "name": "Dinesh",
+            "display_name": "Dinesh",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Dineth",
+            "display_name": "Dineth",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Dinushka",
+            "display_name": "Dinushka",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Dulanjaya",
+            "display_name": "Dulanjaya",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Gayan",
+            "display_name": "Gayan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Harindra",
+            "display_name": "Harindra",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Hemantha",
+            "display_name": "Hemantha",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Hirushan",
+            "display_name": "Hirushan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Indrajith",
+            "display_name": "Indrajith",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Isika",
+            "display_name": "Isika",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Kaushalya",
+            "display_name": "Kaushalya",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Kulshan",
+            "display_name": "Kulshan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Kumara",
+            "display_name": "Kumara",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Lalinda",
+            "display_name": "Lalinda",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Lasanthi W",
+            "display_name": "Lasanthi W",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Manoj",
+            "display_name": "Manoj",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Nayana",
+            "display_name": "Nayana",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Nilan",
+            "display_name": "Nilan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Nimali",
+            "display_name": "Nimali",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Nuwan",
+            "display_name": "Nuwan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Pawan",
+            "display_name": "Pawan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Prasad",
+            "display_name": "Prasad",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Prasanna",
+            "display_name": "Prasanna (OT)",
+            "is_overtime": true,
+            "is_temp": false
+        },
+        {
+            "name": "Ramanayaka",
+            "display_name": "Ramanayaka",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Ranjaya",
+            "display_name": "Ranjaya",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Rathnayake",
+            "display_name": "Rathnayake",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Ravindu",
+            "display_name": "Ravindu",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Roshan",
+            "display_name": "Roshan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Sanda",
+            "display_name": "Sanda (Temp)",
+            "is_overtime": false,
+            "is_temp": true
+        },
+        {
+            "name": "Sanjeewani",
+            "display_name": "Sanjeewani",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Sanoj",
+            "display_name": "Sanoj",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Savinda",
+            "display_name": "Savinda",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Shenal",
+            "display_name": "Shenal",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Theja",
+            "display_name": "Theja",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Thushara",
+            "display_name": "Thushara",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Upul",
+            "display_name": "Upul",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Vehan",
+            "display_name": "Vehan",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Warunika",
+            "display_name": "Warunika",
+            "is_overtime": false,
+            "is_temp": false
+        },
+        {
+            "name": "Wasitha",
+            "display_name": "Wasitha",
+            "is_overtime": false,
+            "is_temp": false
+        }
+    ]
+}

@@ -13,7 +13,7 @@ class DateShiftScreen(BaseScreen):
     def show(self, **kwargs):
         # Main container
         main_container = tk.Frame(self.main_frame, bg="#f0f0f0")
-        main_container.pack(fill=tk.BOTH, expand=True, padx=50, pady=30)
+        main_container.pack(fill=tk.BOTH, expand=True, padx=50, pady=15)  # Reduced from pady=30
         
         # Title at top
         title = tk.Label(
@@ -23,7 +23,7 @@ class DateShiftScreen(BaseScreen):
             bg="#f0f0f0",
             fg="#2c3e50"
         )
-        title.pack(pady=(20, 10))
+        title.pack(pady=(10, 5))  # Reduced from pady=(20, 10)
         
         subtitle = tk.Label(
             main_container,
@@ -32,7 +32,7 @@ class DateShiftScreen(BaseScreen):
             bg="#f0f0f0",
             fg="#7f8c8d"
         )
-        subtitle.pack(pady=(0, 30))
+        subtitle.pack(pady=(0, 15))  # Reduced from pady=(0, 30)
         
         # Two column container
         columns_frame = tk.Frame(main_container, bg="#f0f0f0")
@@ -82,7 +82,7 @@ class DateShiftScreen(BaseScreen):
             day=datetime.now().day
         )
 
-        self.calendar.pack(pady=30, padx=30, ipadx=35, ipady=35)
+        self.calendar.pack(pady=15, padx=30, ipadx=20, ipady=20)  # Reduced from pady=30, ipadx=35, ipady=35
         
         # RIGHT COLUMN - Shift Selection
         right_frame = tk.Frame(columns_frame, bg="#f0f0f0")
@@ -99,7 +99,7 @@ class DateShiftScreen(BaseScreen):
         
         # Shift buttons container
         shift_buttons_frame = tk.Frame(right_frame, bg="#f0f0f0")
-        shift_buttons_frame.pack(pady=40, expand=True)
+        shift_buttons_frame.pack(pady=20, expand=True)  # Reduced from pady=40
         
         self.shift_var = tk.StringVar(value="")
         
@@ -117,12 +117,12 @@ class DateShiftScreen(BaseScreen):
             selectcolor="#2980b9",
             indicatoron=0,
             width=25,
-            height=4,
+            height=3,
             relief=tk.RAISED,
             bd=4,
             cursor="hand2"
         )
-        morning_btn.pack(pady=15)
+        morning_btn.pack(pady=10)  # Reduced from pady=15
         
         # Evening shift button
         evening_btn = tk.Radiobutton(
@@ -138,16 +138,19 @@ class DateShiftScreen(BaseScreen):
             selectcolor="#d35400",
             indicatoron=0,
             width=25,
-            height=4,
+            height=3,
             relief=tk.RAISED,
             bd=4,
             cursor="hand2"
         )
-        evening_btn.pack(pady=15)
+        evening_btn.pack(pady=10)  # Reduced from pady=15
         
-        # Continue button at bottom
+        # Continue button at bottom (with side=BOTTOM to ensure visibility)
+        button_container = tk.Frame(main_container, bg="#f0f0f0")
+        button_container.pack(side=tk.BOTTOM, fill=tk.X, pady=20)
+
         continue_btn = tk.Button(
-            main_container,
+            button_container,
             text="Continue →",
             font=("Arial", 14, "bold"),
             bg="#27ae60",
@@ -157,7 +160,7 @@ class DateShiftScreen(BaseScreen):
             command=self.validate_and_continue,
             cursor="hand2"
         )
-        continue_btn.pack(pady=30)
+        continue_btn.pack()
 
     def validate_and_continue(self):
         """Validate selections and proceed"""

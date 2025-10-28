@@ -94,3 +94,95 @@ class BaseScreen:
             next_btn.pack(side=tk.RIGHT, padx=10)
         
         return button_frame
+    
+    def create_result_card(self, parent, name, workers, product=None, row=0, col=0, edit_mode=False, edit_callback=None, delete_callback=None):
+        """Create a result card in grid layout"""
+        card_frame = tk.Frame(parent, bg="#ecf0f1", relief=tk.RAISED, bd=2)
+        card_frame.grid(row=row, column=col, padx=8, pady=8, sticky="nsew")
+        
+        parent.grid_columnconfigure(col, weight=1, minsize=200)
+        
+        # Add edit and delete buttons in edit mode
+        if edit_mode:
+            btn_container = tk.Frame(card_frame, bg="#ecf0f1")
+            btn_container.pack(side=tk.TOP, anchor="e", padx=5, pady=2)
+            
+            edit_btn = tk.Button(
+                btn_container,
+                text="✏️",
+                font=("Arial", 10, "bold"),
+                bg="#f39c12",
+                fg="white",
+                width=3,
+                command=lambda: edit_callback(name) if edit_callback else None
+            )
+            edit_btn.pack(side=tk.LEFT, padx=2)
+            
+            delete_btn = tk.Button(
+                btn_container,
+                text="🗑️",
+                font=("Arial", 10, "bold"),
+                bg="#e74c3c",
+                fg="white",
+                width=3,
+                command=lambda: delete_callback(name) if delete_callback else None
+            )
+            delete_btn.pack(side=tk.LEFT, padx=2)
+        
+        # Adjust font size for long names
+        if len(name) > 30:
+            name_font = ("Arial", 9, "bold")
+        elif len(name) > 20:
+            name_font = ("Arial", 10, "bold")
+        else:
+            name_font = ("Arial", 11, "bold")
+        
+        name_label = tk.Label(
+            card_frame,
+            text=f"{name}:",
+            font=name_font,
+            bg="#ecf0f1",
+            wraplength=180,
+            justify=tk.LEFT
+        )
+        name_label.pack(padx=10, pady=5, anchor="w")
+        
+        # Show product if available
+        if product:
+            display_product = product[:40] + "..." if len(product) > 40 else product
+            product_label = tk.Label(
+                card_frame,
+                text=f"Product: {display_product}",
+                font=("Arial", 9, "italic"),
+                bg="#ecf0f1",
+                fg="#3498db",
+                wraplength=180,
+                justify=tk.LEFT
+            )
+            product_label.pack(padx=10, pady=2, anchor="w")
+        
+        # Show lot number if available
+        lot_number = self.state.get_lot_number_for_allocation(name)
+        if lot_number:
+            lot_label = tk.Label(
+                card_frame,
+                text=f"Lot: {lot_number}",
+                font=("Arial", 9, "italic"),
+                bg="#ecf0f1",
+                fg="#e67e22",
+                wraplength=180,
+                justify=tk.LEFT
+            )
+            lot_label.pack(padx=10, pady=2, anchor="w")
+        
+        worker_displays = [self.state.get_worker_display_name(w) for w in workers]
+        
+        workers_label = tk.Label(
+            card_frame,
+            text=", ".join(worker_displays),
+            font=("Arial", 9),
+            bg="#ecf0f1",
+            wraplength=180,
+            justify=tk.LEFT
+        )
+        workers_label.pack(padx=15, pady=5, anchor="w")

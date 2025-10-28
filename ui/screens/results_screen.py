@@ -151,7 +151,10 @@ class ResultsScreen(BaseScreen):
                 product = self.state.get_product_for_allocation(process_name)
                 row = result_idx // 3
                 col = result_idx % 3
-                self.create_result_card(grid_frame, process_name, workers, product, row, col)
+                self.create_result_card(grid_frame, process_name, workers, product, row, col, 
+                       edit_mode=self.edit_mode, 
+                       edit_callback=self.edit_card, 
+                       delete_callback=self.delete_card)
                 result_idx += 1
         
         if not process_found:
@@ -209,7 +212,10 @@ class ResultsScreen(BaseScreen):
                 product = self.state.get_product_for_allocation(machine_name)
                 row = result_idx // 3
                 col = result_idx % 3
-                self.create_result_card(grid_frame, machine_name, workers, product, row, col)
+                self.create_result_card(grid_frame, machine_name, workers, product, row, col,
+                    edit_mode=self.edit_mode,
+                    edit_callback=self.edit_card,
+                    delete_callback=self.delete_card)
                 result_idx += 1
         
         if not comp_found:
@@ -225,89 +231,8 @@ class ResultsScreen(BaseScreen):
         canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
     
-    def create_result_card(self, parent, name, workers, product=None, row=0, col=0):
-        """Create a result card in grid layout"""
-        card_frame = tk.Frame(parent, bg="#ecf0f1", relief=tk.RAISED, bd=2)
-        card_frame.grid(row=row, column=col, padx=8, pady=8, sticky="nsew")
-        
-        parent.grid_columnconfigure(col, weight=1, minsize=200)
-        
-        # Add edit button in edit mode
-        # THIS MUST BE HERE:
-        if self.edit_mode:
-            btn_container = tk.Frame(card_frame, bg="#ecf0f1")
-            btn_container.pack(side=tk.TOP, anchor="e", padx=5, pady=2)
-            
-            edit_btn = tk.Button(
-                btn_container,
-                text="✏️",
-                font=("Arial", 10, "bold"),
-                bg="#f39c12",
-                fg="white",
-                width=3,
-                command=lambda: self.edit_card(name)
-            )
-            edit_btn.pack(side=tk.LEFT, padx=2)
-            
-            delete_btn = tk.Button(
-                btn_container,
-                text="🗑️",
-                font=("Arial", 10, "bold"),
-                bg="#e74c3c",
-                fg="white",
-                width=3,
-                command=lambda: self.delete_card(name)
-            )
-            delete_btn.pack(side=tk.LEFT, padx=2)
-        
-        name_label = tk.Label(
-            card_frame,
-            text=f"{name}:",
-            font=("Arial", 11, "bold"),
-            bg="#ecf0f1"
-        )
-        name_label.pack(padx=10, pady=5, anchor="w")
-        
-        # Show product if available
-        if product:
-            display_product = product[:40] + "..." if len(product) > 40 else product
-            product_label = tk.Label(
-                card_frame,
-                text=f"Product: {display_product}",
-                font=("Arial", 9, "italic"),
-                bg="#ecf0f1",
-                fg="#3498db",
-                wraplength=180,
-                justify=tk.LEFT
-            )
-            product_label.pack(padx=10, pady=2, anchor="w")
-        
-        # Show lot number if available
-        lot_number = self.state.get_lot_number_for_allocation(name)
-        if lot_number:
-            lot_label = tk.Label(
-                card_frame,
-                text=f"Lot: {lot_number}",
-                font=("Arial", 9, "italic"),
-                bg="#ecf0f1",
-                fg="#e67e22",
-                wraplength=180,
-                justify=tk.LEFT
-            )
-            lot_label.pack(padx=10, pady=2, anchor="w")
-        
-        worker_displays = [self.state.get_worker_display_name(w) for w in workers]
-        
-        workers_label = tk.Label(
-            card_frame,
-            text=", ".join(worker_displays),
-            font=("Arial", 9),
-            bg="#ecf0f1",
-            wraplength=180,
-            justify=tk.LEFT
-        )
-        workers_label.pack(padx=15, pady=5, anchor="w")
-    
+
+ 
     def edit_card(self, allocation_name):
         """Edit a specific allocation card"""
         from ui.dialogs.edit_allocation_dialog import EditAllocationDialog

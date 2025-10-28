@@ -34,19 +34,27 @@ class AllocationCard:
         # Title/Button
         btn_color = "#9b59b6" if self.is_compression else "#3498db"
         
+        
+
+        # Adjust font size based on name length
+        if len(self.name) > 30:
+            btn_font = ("Arial", 8, "bold")
+        elif len(self.name) > 20:
+            btn_font = ("Arial", 9, "bold")
+        else:
+            btn_font = ("Arial", 10, "bold")
+
         btn = tk.Button(
             card_frame,
             text=self.name,
-            font=("Arial", 10, "bold"),
+            font=btn_font,
             bg=btn_color if not has_allocation else "#95a5a6",  # Gray if allocated
             fg="white",
-            width=20,
-            height=2,
             command=lambda: self._handle_allocate(),
             wraplength=180,
             state='normal' if not has_allocation else 'disabled'  # Disable if allocated
         )
-        btn.pack(pady=5, padx=5)
+        btn.pack(pady=5, padx=5, fill=tk.X, ipady=10)
         
         # Product dropdown (only if not compression machine)
 # Product dropdown for all tasks

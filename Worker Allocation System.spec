@@ -1,38 +1,12 @@
 # -*- mode: python ; coding: utf-8 -*-
-from PyInstaller.utils.hooks import collect_all
 
-# Collect all Babel and tkcalendar resources
-datas = [
-    ('utils', 'utils'),
-    ('allocations_json', 'allocations_json'),
-    ('exports', 'exports'),
-    ('excel', 'excel'),
-    ('allocation_history.json', '.'),
-    ('audit_trail.json', '.'),
-]
-
-binaries = []
-hiddenimports = ['tkcalendar']
-
-# Include all Babel files
-tmp_babel = collect_all('babel')
-datas += tmp_babel[0]
-binaries += tmp_babel[1]
-hiddenimports += tmp_babel[2]
-hiddenimports += ['babel.numbers']  # explicitly include this missing submodule
-
-# Include tkcalendar resources too
-tmp_tkcalendar = collect_all('tkcalendar')
-datas += tmp_tkcalendar[0]
-binaries += tmp_tkcalendar[1]
-hiddenimports += tmp_tkcalendar[2]
 
 a = Analysis(
     ['main.py'],
     pathex=[],
-    binaries=binaries,
-    datas=datas,
-    hiddenimports=hiddenimports,
+    binaries=[],
+    datas=[('utils', 'utils'), ('allocations_json', 'allocations_json'), ('exports', 'exports'), ('excel', 'excel'), ('allocation_history.json', '.'), ('audit_trail.json', '.')],
+    hiddenimports=['tkcalendar'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -40,7 +14,6 @@ a = Analysis(
     noarchive=False,
     optimize=0,
 )
-
 pyz = PYZ(a.pure)
 
 exe = EXE(
@@ -60,7 +33,6 @@ exe = EXE(
     codesign_identity=None,
     entitlements_file=None,
 )
-
 coll = COLLECT(
     exe,
     a.binaries,

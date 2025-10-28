@@ -6,7 +6,7 @@ from datetime import datetime
 
 import json
 
-from reportlab.lib.pagesizes import letter, A4
+from reportlab.lib.pagesizes import A3, A4
 from reportlab.lib import colors
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
@@ -200,7 +200,7 @@ class ResultsExporter:
         # Create PDF document
         doc = SimpleDocTemplate(
             filename,
-            pagesize=letter,
+            pagesize=A3,
             rightMargin=0.5*inch,
             leftMargin=0.5*inch,
             topMargin=0.5*inch,
