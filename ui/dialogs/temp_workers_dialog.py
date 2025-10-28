@@ -2,8 +2,9 @@
 Temporary workers dialog
 """
 import tkinter as tk
-from tkinter import messagebox
-
+import json
+import os
+from tkinter import messagebox, simpledialog
 
 class TempWorkersDialog:
     """Dialog for adding temporary workers"""
@@ -39,6 +40,45 @@ class TempWorkersDialog:
             fg="#7f8c8d"
         )
         instruction.pack(pady=20)
+
+        # Frequent workers section
+        frequent_workers = self.load_frequent_workers()
+
+        if frequent_workers:
+            frequent_frame = tk.Frame(self.window, bg="#e8f4f8", relief=tk.RAISED, bd=2)
+            frequent_frame.pack(pady=10, padx=40, fill=tk.X)
+            
+            frequent_label = tk.Label(
+                frequent_frame,
+                text="⚡ Quick Add Frequent Temp Workers:",
+                font=("Arial", 12, "bold"),
+                bg="#e8f4f8"
+            )
+            frequent_label.pack(pady=5)
+            
+            # Checkboxes for frequent workers
+            self.frequent_vars = {}
+            checkbox_container = tk.Frame(frequent_frame, bg="#e8f4f8")
+            checkbox_container.pack(pady=10, padx=20)
+            
+            for i, worker in enumerate(frequent_workers):
+                var = tk.BooleanVar()
+                self.frequent_vars[worker] = var
+                
+                cb = tk.Checkbutton(
+                    checkbox_container,
+                    text=worker,
+                    variable=var,
+                    font=("Arial", 11),
+                    bg="#e8f4f8",
+                    activebackground="#e8f4f8"
+                )
+                # Arrange in 3 columns
+                cb.grid(row=i//3, column=i%3, sticky="w", padx=20, pady=5)
+        else:
+            self.frequent_vars = {}
+
+        
         
         text_frame = tk.Frame(self.window, bg="#f0f0f0")
         text_frame.pack(pady=20, padx=40, fill=tk.BOTH, expand=True)
@@ -51,15 +91,22 @@ class TempWorkersDialog:
         text_widget.config(yscrollcommand=scrollbar.set)
         
         def confirm_temp():
-            names = text_widget.get("1.0", tk.END).strip().split("\n")
-            names = [n.strip() for n in names if n.strip()]
+            # Get manually entered names
+            manual_names = text_widget.get("1.0", tk.END).strip().split("\n")
+            manual_names = [n.strip() for n in manual_names if n.strip()]
             
-            if names:
-                self.state.add_temp(names)
-                messagebox.showinfo("Success", f"Added {len(names)} temporary worker(s)")
+            # Get checked frequent workers
+            checked_workers = [name for name, var in self.frequent_vars.items() if var.get()]
+            
+            # Combine both lists (remove duplicates)
+            all_names = list(set(checked_workers + manual_names))
+            
+            if all_names:
+                self.state.add_temp(all_names)
+                messagebox.showinfo("Success", f"Added {len(all_names)} temporary worker(s)")
                 self.window.destroy()
             else:
-                messagebox.showwarning("No Input", "You have not added any temporary workers")
+                messagebox.showwarning("No Input", "Please select or enter temporary workers")
         
         # Bottom buttons
         button_frame = tk.Frame(self.window, bg="#f0f0f0")
@@ -93,3 +140,12 @@ class TempWorkersDialog:
             command=self.window.destroy
         )
         close_btn.pack(pady=10)
+
+    def load_frequent_workers(self):
+        """Load list of frequent temp workers"""
+        preset_file = "data/frequent_temp_workers.json"
+        if os.path.exists(preset_file):
+            with open(preset_file, 'r') as f:
+                return json.load(f)
+        return []
+

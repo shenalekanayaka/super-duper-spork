@@ -281,5 +281,20 @@
             "unassigned_workers": 49,
             "group": "Group A"
         }
+    },
+    {
+        "id": "20251028104047922095",
+        "timestamp": "2025-10-28 10:40:47",
+        "change_type": "ALLOCATION_CREATED",
+        "allocation_date": "2025-10-28",
+        "shift_time": "Evening",
+        "user": "Admin",
+        "details": {
+            "processes_allocated": 0,
+            "machines_allocated": 0,
+            "total_workers_assigned": 0,
+            "unassigned_workers": 33,
+            "group": "Group B"
+        }
     }
 ]

@@ -95,11 +95,11 @@ class DateShiftScreen(BaseScreen):
             bg="#f0f0f0",
             fg="#2c3e50"
         )
-        shift_label.pack(pady=20)
+        shift_label.pack(pady=5)
         
         # Shift buttons container
         shift_buttons_frame = tk.Frame(right_frame, bg="#f0f0f0")
-        shift_buttons_frame.pack(pady=20, expand=True)  # Reduced from pady=40
+        shift_buttons_frame.pack(pady=10, expand=True)  # Reduced from pady=40
         
         self.shift_var = tk.StringVar(value="")
         
