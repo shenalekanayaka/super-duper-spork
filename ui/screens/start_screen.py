@@ -41,12 +41,14 @@ class StartScreen(BaseScreen):
                 fg="#7f8c8d"
             )
             info_label.pack(pady=10)
-        # ↑↑↑ END OF ADDITION
 
         button_frame = tk.Frame(center_frame, bg="#f0f0f0")
         button_frame.pack(pady=30)
-        
+
         for group in self.state.GROUPS.keys():
+            if group == "General Shift":  # Skip General Shift
+                continue
+            
             btn = tk.Button(
                 button_frame,
                 text=f"{group}\n({len(self.state.GROUPS[group])} workers)",

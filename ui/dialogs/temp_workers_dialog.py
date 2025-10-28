@@ -30,7 +30,7 @@ class TempWorkersDialog:
             bg="#f0f0f0",
             fg="#2c3e50"
         )
-        title.pack(pady=40)
+        title.pack(pady=20)
         
         instruction = tk.Label(
             self.window,
@@ -39,14 +39,14 @@ class TempWorkersDialog:
             bg="#f0f0f0",
             fg="#7f8c8d"
         )
-        instruction.pack(pady=20)
+        instruction.pack(pady=10)
 
         # Frequent workers section
         frequent_workers = self.load_frequent_workers()
 
         if frequent_workers:
             frequent_frame = tk.Frame(self.window, bg="#e8f4f8", relief=tk.RAISED, bd=2)
-            frequent_frame.pack(pady=10, padx=40, fill=tk.X)
+            frequent_frame.pack(pady=10, padx=20, fill=tk.X)
             
             frequent_label = tk.Label(
                 frequent_frame,
@@ -81,7 +81,7 @@ class TempWorkersDialog:
         
         
         text_frame = tk.Frame(self.window, bg="#f0f0f0")
-        text_frame.pack(pady=20, padx=40, fill=tk.BOTH, expand=True)
+        text_frame.pack(pady=10, padx=20, fill=tk.BOTH, expand=True)
         
         text_widget = tk.Text(text_frame, height=10, width=20, font=("Arial", 13))
         text_widget.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
@@ -117,9 +117,9 @@ class TempWorkersDialog:
         
         # Bottom buttons
         button_frame = tk.Frame(self.window, bg="#f0f0f0")
-        button_frame.pack(side=tk.BOTTOM, pady=30)
+        button_frame.pack(side=tk.BOTTOM, pady=10)
 
-        btn_padx = 60  # horizontal padding in pixels
+        btn_padx = 10  # horizontal padding in pixels
         btn_pady = 8   # vertical padding in pixels
         
         confirm_btn = tk.Button(

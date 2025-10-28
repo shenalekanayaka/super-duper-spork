@@ -16,7 +16,8 @@ def resource_path(relative_path):
 # Initialize with your workers from products.csv
 GROUPS = {
     "Group A": [],
-    "Group B": []
+    "Group B": [],
+    "General Shift": []  # New group for 8-5 workers
 }
 
 # These will be loaded from CSV
@@ -154,7 +155,7 @@ def load_or_create_workers_csv():
         
         print(f"Created {WORKERS_CSV} with default skill ratings (0-5 scale recommended)")
     
-    new_groups = {"Group A": [], "Group B": []}
+    new_groups = {"Group A": [], "Group B": [], "General Shift": []}
     new_skills = {}
     
     with open(WORKERS_CSV, mode='r', newline='', encoding='utf-8') as file:
