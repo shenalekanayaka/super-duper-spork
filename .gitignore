@@ -2,3 +2,6 @@ build/*
 *.zip
 *.pyc
 dist/*
+
+# Add to .gitignore
+"__pycache__/" | Out-File -Append .gitignore

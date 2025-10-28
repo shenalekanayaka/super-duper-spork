@@ -100,8 +100,15 @@ class TempWorkersDialog:
             
             # Combine both lists (remove duplicates)
             all_names = list(set(checked_workers + manual_names))
-            
+
             if all_names:
+                # Update usage dates for checked frequent workers
+                self.update_worker_usage(checked_workers)
+                
+                # ADD NEW WORKERS TO FREQUENT LIST
+                for worker in manual_names:
+                    self.add_to_frequent_workers(worker)
+                
                 self.state.add_temp(all_names)
                 messagebox.showinfo("Success", f"Added {len(all_names)} temporary worker(s)")
                 self.window.destroy()
@@ -143,9 +150,72 @@ class TempWorkersDialog:
 
     def load_frequent_workers(self):
         """Load list of frequent temp workers"""
-        preset_file = "data/frequent_temp_workers.json"
+        from datetime import datetime, timedelta
+        
+        preset_file = "utils/frequent_temp_workers.json"
         if os.path.exists(preset_file):
             with open(preset_file, 'r') as f:
-                return json.load(f)
+                data = json.load(f)
+                
+                # Clean up old workers (not used in 30 days)
+                today = datetime.now()
+                active_workers = {}
+                
+                for worker, last_used in data.items():
+                    last_used_date = datetime.strptime(last_used, "%Y-%m-%d")
+                    days_since_used = (today - last_used_date).days
+                    
+                    if days_since_used <= 30:  # Keep if used within 30 days
+                        active_workers[worker] = last_used
+                
+                # Save cleaned list back
+                if len(active_workers) != len(data):
+                    with open(preset_file, 'w') as f:
+                        json.dump(active_workers, f, indent=2)
+                
+                return list(active_workers.keys())
+        
         return []
 
+    def update_worker_usage(self, workers):
+        """Update last used date for selected workers"""
+        from datetime import datetime
+        
+        preset_file = "utils/frequent_temp_workers.json"
+        
+        # Load existing data
+        if os.path.exists(preset_file):
+            with open(preset_file, 'r') as f:
+                data = json.load(f)
+        else:
+            data = {}
+        
+        # Update dates for used workers
+        today = datetime.now().strftime("%Y-%m-%d")
+        for worker in workers:
+            if worker in data:
+                data[worker] = today
+        
+        # Save back
+        os.makedirs("data", exist_ok=True)
+        with open(preset_file, 'w') as f:
+            json.dump(data, f, indent=2)
+
+    def add_to_frequent_workers(self, worker_name):
+        """Add a new worker to frequent list"""
+        from datetime import datetime
+        
+        preset_file = "utils/frequent_temp_workers.json"
+        
+        if os.path.exists(preset_file):
+            with open(preset_file, 'r') as f:
+                data = json.load(f)
+        else:
+            data = {}
+        
+        today = datetime.now().strftime("%Y-%m-%d")
+        data[worker_name] = today
+        
+        os.makedirs("data", exist_ok=True)
+        with open(preset_file, 'w') as f:
+            json.dump(data, f, indent=2)
