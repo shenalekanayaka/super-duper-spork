@@ -217,7 +217,19 @@ class DateShiftScreen(BaseScreen):
                 return
         
         # Proceed to group selection (new allocation)
-        self.app.show_screen('start')
+        # Proceed to group selection (new allocation) - require password
+        from ui.dialogs.password_dialog import PasswordDialog
+        password_dialog = PasswordDialog(self.root, password_type='user')
+        authenticated = password_dialog.show()
+
+        if authenticated:
+            self.app.show_screen('start')
+        else:
+            # User cancelled or wrong password
+            messagebox.showinfo(
+                "Authentication Required",
+                "Password authentication is required to create a new allocation."
+            )
     
     def load_allocation(self, filepath):
         """Load allocation from JSON file and show results"""

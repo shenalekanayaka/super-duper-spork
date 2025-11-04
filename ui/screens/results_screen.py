@@ -366,7 +366,7 @@ class ResultsScreen(BaseScreen):
                 back_btn = self.create_button(
                     button_frame,
                     "← Back to Menu",
-                    lambda: self.app.show_screen('main_menu'),
+                    self.back_to_menu_with_password,
                     bg="#3498db",
                     width=20
                 )
@@ -477,3 +477,18 @@ class ResultsScreen(BaseScreen):
         from ui.dialogs.export_dialog import ExportDialog
         dialog = ExportDialog(self.root, self.state)
         dialog.show()
+
+    def back_to_menu_with_password(self):
+        """Go back to allocation menu with password protection"""
+        from ui.dialogs.password_dialog import PasswordDialog
+        
+        password_dialog = PasswordDialog(self.root, password_type='user')
+        authenticated = password_dialog.show()
+        
+        if authenticated:
+            self.app.show_screen('main_menu')
+        else:
+            messagebox.showinfo(
+                "Authentication Required",
+                "Password authentication is required to return to the allocation menu."
+            )
