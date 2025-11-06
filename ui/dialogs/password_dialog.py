@@ -9,12 +9,14 @@ class PasswordDialog:
     """Dialog for password authentication"""
     
     # Set your password here
-    ADMIN_PASSWORD = "admin123"  # Change this to your desired password
+    ADMIN_PASSWORD = "5kDk9o"  # For editing allocations
+    USER_PASSWORD = "user123"    # For creating allocations and navigation
     
-    def __init__(self, parent):
+    def __init__(self, parent, password_type='admin'):
         self.parent = parent
         self.result = False
         self.dialog = None
+        self.password_type = password_type  # 'admin' or 'user'
     
     def show(self):
         """Show password dialog and return True if authenticated"""
@@ -99,7 +101,10 @@ class PasswordDialog:
         """Verify entered password"""
         entered_password = self.password_entry.get()
         
-        if entered_password == self.ADMIN_PASSWORD:
+        # Check against the appropriate password
+        correct_password = self.ADMIN_PASSWORD if self.password_type == 'admin' else self.USER_PASSWORD
+        
+        if entered_password == correct_password:
             self.result = True
             self.dialog.destroy()
         else:

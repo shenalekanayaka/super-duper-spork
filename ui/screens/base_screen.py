@@ -51,10 +51,10 @@ class BaseScreen:
             command=command
         )
     
-    def create_scrollable_frame(self, parent):
+    def create_scrollable_frame(self, parent, horizontal=False):
         """Create a canvas with scrollbar for scrollable content"""
         canvas = tk.Canvas(parent, bg="#f0f0f0", highlightthickness=0)
-        scrollbar = tk.Scrollbar(parent, orient="vertical", command=canvas.yview)
+        v_scrollbar = tk.Scrollbar(parent, orient="vertical", command=canvas.yview)
         scrollable_frame = tk.Frame(canvas, bg="#f0f0f0")
         
         scrollable_frame.bind(
@@ -63,11 +63,16 @@ class BaseScreen:
         )
         
         canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
-        canvas.configure(yscrollcommand=scrollbar.set)
+        canvas.configure(yscrollcommand=v_scrollbar.set)
         
         bind_mousewheel(canvas)
         
-        return canvas, scrollbar, scrollable_frame
+        if horizontal:
+            h_scrollbar = tk.Scrollbar(parent, orient="horizontal", command=canvas.xview)
+            canvas.configure(xscrollcommand=h_scrollbar.set)
+            return canvas, v_scrollbar, h_scrollbar, scrollable_frame
+        
+        return canvas, v_scrollbar, scrollable_frame
     
     def create_nav_buttons(self, back_command=None, next_command=None, 
                           back_text="← Back", next_text="Next →"):

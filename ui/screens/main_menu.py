@@ -61,7 +61,7 @@ class MainMenuScreen(BaseScreen):
         )
         process_label.pack(pady=10)
         
-        canvas, scrollbar, scrollable_frame = self.create_scrollable_frame(left_frame)
+        canvas, v_scrollbar, h_scrollbar, scrollable_frame = self.create_scrollable_frame(left_frame, horizontal=True)
         
         # Create 3 column grid
         grid_frame = tk.Frame(scrollable_frame, bg="#f0f0f0")
@@ -71,11 +71,11 @@ class MainMenuScreen(BaseScreen):
         sorted_processes = sorted(
             self.state.PROCESSES,
             key=lambda p: (
-                bool(self.state.allocations.get(p[0], [])),  # False (unfilled) sorts before True (filled)
-                p[0]  # Then sort alphabetically by name
+                bool(self.state.allocations.get(p[0], [])),
+                p[0]
             )
         )
-
+        
         for idx, process_data in enumerate(sorted_processes):
             process_name = process_data[0]
             slots = process_data[1]
@@ -97,7 +97,8 @@ class MainMenuScreen(BaseScreen):
             card.render(row, col)
         
         canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        v_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        h_scrollbar.pack(side=tk.BOTTOM, fill=tk.X, before=canvas)
     
     def create_compression_section(self, parent):
         """Create the compression section"""
@@ -113,7 +114,7 @@ class MainMenuScreen(BaseScreen):
         )
         comp_label.pack(pady=10)
         
-        canvas, scrollbar, scrollable_frame = self.create_scrollable_frame(right_frame)
+        canvas, v_scrollbar, h_scrollbar, scrollable_frame = self.create_scrollable_frame(right_frame, horizontal=True)
         
         # Create 3 column grid
         grid_frame = tk.Frame(scrollable_frame, bg="#f0f0f0")
@@ -123,11 +124,11 @@ class MainMenuScreen(BaseScreen):
         sorted_machines = sorted(
             self.state.compression_machines,
             key=lambda m: (
-                bool(self.state.allocations.get(m[0], [])),  # False (unfilled) sorts before True (filled)
-                m[0]  # Then sort alphabetically by name
+                bool(self.state.allocations.get(m[0], [])),
+                m[0]
             )
         )
-
+        
         for idx, machine_data in enumerate(sorted_machines):
             machine_name = machine_data[0]
             slots = machine_data[1]
@@ -149,7 +150,8 @@ class MainMenuScreen(BaseScreen):
             card.render(row, col)
         
         canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        v_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        h_scrollbar.pack(side=tk.BOTTOM, fill=tk.X, before=canvas)
     
     def create_bottom_buttons(self):
         """Create bottom navigation buttons"""

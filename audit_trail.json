@@ -60,6 +60,7 @@
         }
     },
     {
+<<<<<<< HEAD
         "id": "20251028123756251184",
         "timestamp": "2025-10-28 12:37:56",
         "change_type": "ALLOCATION_CREATED",
@@ -347,6 +348,35 @@
             "total_workers_assigned": 0,
             "unassigned_workers": 15,
             "group": "Group B"
+=======
+        "id": "20251104090523995358",
+        "timestamp": "2025-11-04 09:05:23",
+        "change_type": "ALLOCATION_CREATED",
+        "allocation_date": "2025-11-04",
+        "shift_time": "Morning",
+        "user": "Admin",
+        "details": {
+            "processes_allocated": 1,
+            "machines_allocated": 1,
+            "total_workers_assigned": 0,
+            "unassigned_workers": 44,
+            "group": "Group A"
+        }
+    },
+    {
+        "id": "20251104090527130147",
+        "timestamp": "2025-11-04 09:05:27",
+        "change_type": "ALLOCATION_CREATED",
+        "allocation_date": "2025-11-04",
+        "shift_time": "Morning",
+        "user": "Admin",
+        "details": {
+            "processes_allocated": 1,
+            "machines_allocated": 1,
+            "total_workers_assigned": 0,
+            "unassigned_workers": 44,
+            "group": "Group A"
+>>>>>>> 4115510ed246f75298c85c9f9730169594d46d53
         }
     }
 ]
