@@ -10,64 +10,6 @@ from ui.screens.base_screen import BaseScreen
 class ResultsScreen(BaseScreen):
     """Screen displaying allocation results"""
 
-    def save_changes(self):
-        """Save changes to the allocation"""
-        result = messagebox.askyesno(
-            "Save Changes",
-            "Are you sure you want to save these changes?\n\n"
-            "This will update the allocation file."
-        )
-        
-        if result:
-            try:
-                # Log the edit to audit trail
-                try:
-                    self.state.audit_trail.log_edit(
-                        change_type='ALLOCATION_EDITED',
-                        allocation_date=self.state.selected_date,
-                        shift_time=self.state.shift_time,
-                        details={
-                            'allocations_count': len(self.state.allocations),
-                            'allocations': {k: len(v) for k, v in self.state.allocations.items()},
-                            'total_assigned_workers': sum(len(v) for v in self.state.allocations.values()),
-                            'unassigned_workers_count': len(self.state.available_workers),
-                            'overtime_workers': len(self.state.overtime_workers),
-                            'temp_workers': len(self.state.temp_workers)
-                        }
-                    )
-                except Exception as e:
-                    print(f"Warning: Could not log to audit trail: {e}")
-                
-                # Save the allocation to JSON
-                from export_results import ResultsExporter
-                exporter = ResultsExporter(self.state)
-                json_file = exporter.save_allocation_json(self.state.shift_time)
-                
-                # Also regenerate PDF
-                pdf_file = exporter.export_to_pdf(self.state.shift_time)
-                
-                messagebox.showinfo(
-                    "Changes Saved",
-                    "Allocation has been successfully updated!\n\n"
-                    f"Updated files:\n"
-                    f"• {os.path.basename(json_file)}\n"
-                    f"• {os.path.basename(pdf_file)}"
-                )
-                
-                # Clear edit mode flags
-                self.state.is_editing_history = False
-                
-                # Return to history viewer with the updated file
-                self.app.show_screen('history_viewer', filepath=json_file)
-                
-            except Exception as e:
-                messagebox.showerror(
-                    "Save Error",
-                    f"Failed to save changes:\n{str(e)}"
-                )
-            
-
-    
     def show(self, **kwargs):
         # Check if we're in edit mode
         self.edit_mode = kwargs.get('edit_mode', False)
@@ -151,10 +93,12 @@ class ResultsScreen(BaseScreen):
                 product = self.state.get_product_for_allocation(process_name)
                 row = result_idx // 3
                 col = result_idx % 3
-                self.create_result_card(grid_frame, process_name, workers, product, row, col, 
-                       edit_mode=self.edit_mode, 
-                       edit_callback=self.edit_card, 
-                       delete_callback=self.delete_card)
+                self.create_result_card(
+                    grid_frame, process_name, workers, product, row, col, 
+                    edit_mode=self.edit_mode, 
+                    edit_callback=self.edit_card, 
+                    delete_callback=self.delete_card
+                )
                 result_idx += 1
         
         if not process_found:
@@ -184,7 +128,6 @@ class ResultsScreen(BaseScreen):
         )
         comp_label.pack(pady=10)
         
-
         if self.edit_mode:
             add_machine_btn = tk.Button(
                 right_frame,
@@ -212,10 +155,12 @@ class ResultsScreen(BaseScreen):
                 product = self.state.get_product_for_allocation(machine_name)
                 row = result_idx // 3
                 col = result_idx % 3
-                self.create_result_card(grid_frame, machine_name, workers, product, row, col,
+                self.create_result_card(
+                    grid_frame, machine_name, workers, product, row, col,
                     edit_mode=self.edit_mode,
                     edit_callback=self.edit_card,
-                    delete_callback=self.delete_card)
+                    delete_callback=self.delete_card
+                )
                 result_idx += 1
         
         if not comp_found:
@@ -231,8 +176,6 @@ class ResultsScreen(BaseScreen):
         canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
     
-
- 
     def edit_card(self, allocation_name):
         """Edit a specific allocation card"""
         from ui.dialogs.edit_allocation_dialog import EditAllocationDialog
@@ -257,34 +200,42 @@ class ResultsScreen(BaseScreen):
             lot_number = self.state.get_lot_number_for_allocation(allocation_name)
             
             # Log the deletion
-            self.state.audit_trail.log_edit(
-                change_type='ALLOCATION_DELETED',
-                allocation_date=self.state.selected_date,
-                shift_time=self.state.shift_time,
-                details={
-                    'allocation_name': allocation_name,
-                    'workers': workers,
-                    'worker_count': len(workers),
-                    'product': product or 'N/A',
-                    'lot_number': lot_number or 'N/A'
-                }
-            )
-
-            self.state.audit_trail.log_edit(
-                change_type='WORKER_ASSIGNMENT_CHANGED',
-                allocation_date=self.state.selected_date,
-                shift_time=self.state.shift_time,
-                details={
-                    'allocation_name': self.allocation_name,
-                    'previous_workers': previous_workers,  # Store this before changes
-                    'new_workers': new_workers,
-                    'workers_added': list(set(new_workers) - set(previous_workers)),
-                    'workers_removed': list(set(previous_workers) - set(new_workers))
-                }
-            )
+            try:
+                self.state.audit_trail.log_edit(
+                    change_type='ALLOCATION_DELETED',
+                    allocation_date=self.state.selected_date,
+                    shift_time=self.state.shift_time,
+                    details={
+                        'allocation_name': allocation_name,
+                        'workers': workers,
+                        'worker_count': len(workers),
+                        'product': product or 'N/A',
+                        'lot_number': lot_number or 'N/A'
+                    }
+                )
+            except Exception as e:
+                print(f"Warning: Could not log to audit trail: {e}")
             
-        
-
+            # Actually delete the allocation
+            if allocation_name in self.state.allocations:
+                # Return workers to available pool
+                returned_workers = self.state.allocations.pop(allocation_name)
+                self.state.available_workers.extend(returned_workers)
+                
+                # Remove product and lot number associations if they exist
+                if hasattr(self.state, 'products_dict') and allocation_name in self.state.products_dict:
+                    del self.state.products_dict[allocation_name]
+                if hasattr(self.state, 'lot_numbers') and allocation_name in self.state.lot_numbers:
+                    del self.state.lot_numbers[allocation_name]
+                
+                messagebox.showinfo(
+                    "Deleted",
+                    f"Allocation '{allocation_name}' has been deleted.\n\n"
+                    f"{len(returned_workers)} worker(s) returned to unassigned pool."
+                )
+            
+            # Refresh the screen to show changes
+            self.app.show_screen('results', edit_mode=True)
 
     def add_new_allocation(self, allocation_type):
         """Add new process or machine allocation"""
@@ -329,75 +280,75 @@ class ResultsScreen(BaseScreen):
             workers_label.pack(padx=25, pady=10, anchor="w")
     
     def create_bottom_buttons(self):
-            """Create bottom navigation buttons"""
-            button_frame = tk.Frame(self.main_frame, bg="#f0f0f0")
-            button_frame.pack(side=tk.BOTTOM, pady=20, fill=tk.X, padx=20)
+        """Create bottom navigation buttons"""
+        button_frame = tk.Frame(self.main_frame, bg="#f0f0f0")
+        button_frame.pack(side=tk.BOTTOM, pady=20, fill=tk.X, padx=20)
+        
+        if self.edit_mode:
+            # Edit mode buttons
+            back_btn = self.create_button(
+                button_frame,
+                "← Cancel Editing",
+                self.cancel_editing,
+                bg="#95a5a6",
+                width=20
+            )
+            back_btn.pack(side=tk.LEFT, padx=5)
             
-            if self.edit_mode:
-                # Edit mode buttons
-                back_btn = self.create_button(
-                    button_frame,
-                    "← Cancel Editing",
-                    self.cancel_editing,
-                    bg="#95a5a6",
-                    width=20
-                )
-                back_btn.pack(side=tk.LEFT, padx=5)
-                
-                save_btn = self.create_button(
-                    button_frame,
-                    "💾 Save Changes",
-                    self.save_changes,
-                    bg="#27ae60",
-                    width=20
-                )
-                save_btn.pack(side=tk.LEFT, padx=5)
-                
-                exit_btn = self.create_button(
-                    button_frame,
-                    "Exit",
-                    self.root.destroy,
-                    bg="#34495e",
-                    width=20
-                )
-                exit_btn.pack(side=tk.RIGHT, padx=5)
-            else:
-                # Normal mode buttons
-                back_btn = self.create_button(
-                    button_frame,
-                    "← Back to Menu",
-                    self.back_to_menu_with_password,
-                    bg="#3498db",
-                    width=20
-                )
-                back_btn.pack(side=tk.LEFT, padx=5)
-                
-                export_btn = self.create_button(
-                    button_frame,
-                    "📊 Save",
-                    self.export_results,
-                    bg="#16a085",
-                    width=20
-                )
-                export_btn.pack(side=tk.LEFT, padx=5)
-                
-                restart_btn = self.create_button(
-                    button_frame,
-                    "Restart",
-                    self.app.restart,
-                    bg="#e74c3c",
-                    width=20
-                )
-                restart_btn.pack(side=tk.LEFT, padx=5)
-                
-                exit_btn = self.create_button(
-                    button_frame,
-                    "Exit",
-                    self.root.destroy,
-                    bg="#34495e",
-                    width=20
-                )
-                exit_btn.pack(side=tk.LEFT, padx=5)
+            save_btn = self.create_button(
+                button_frame,
+                "💾 Save Changes",
+                self.save_changes,
+                bg="#27ae60",
+                width=20
+            )
+            save_btn.pack(side=tk.LEFT, padx=5)
+            
+            exit_btn = self.create_button(
+                button_frame,
+                "Exit",
+                self.root.destroy,
+                bg="#34495e",
+                width=20
+            )
+            exit_btn.pack(side=tk.RIGHT, padx=5)
+        else:
+            # Normal mode buttons
+            back_btn = self.create_button(
+                button_frame,
+                "← Back to Menu",
+                self.back_to_menu_with_password,
+                bg="#3498db",
+                width=20
+            )
+            back_btn.pack(side=tk.LEFT, padx=5)
+            
+            export_btn = self.create_button(
+                button_frame,
+                "📊 Save",
+                self.export_results,
+                bg="#16a085",
+                width=20
+            )
+            export_btn.pack(side=tk.LEFT, padx=5)
+            
+            restart_btn = self.create_button(
+                button_frame,
+                "Restart",
+                self.app.restart,
+                bg="#e74c3c",
+                width=20
+            )
+            restart_btn.pack(side=tk.LEFT, padx=5)
+            
+            exit_btn = self.create_button(
+                button_frame,
+                "Exit",
+                self.root.destroy,
+                bg="#34495e",
+                width=20
+            )
+            exit_btn.pack(side=tk.LEFT, padx=5)
     
     def cancel_editing(self):
         """Cancel editing and return to history viewer"""

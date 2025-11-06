@@ -1,382 +1,157 @@
 [
     {
-        "id": "20251028123328364358",
-        "timestamp": "2025-10-28 12:33:28",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-11-07",
-        "shift_time": "Morning",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 1,
-            "machines_allocated": 0,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 43,
-            "group": "Group A"
-        }
-    },
-    {
-        "id": "20251028123608899153",
-        "timestamp": "2025-10-28 12:36:08",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-11-02",
+        "id": "20251106134954016215",
+        "timestamp": "2025-11-06 13:49:54",
+        "change_type": "ALLOCATION_DELETED",
+        "allocation_date": "2025-11-05",
         "shift_time": "Evening",
         "user": "Admin",
         "details": {
-            "processes_allocated": 20,
-            "machines_allocated": 14,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 44,
-            "group": "Group A"
+            "allocation_name": "128-001",
+            "workers": [
+                "Dineth"
+            ],
+            "worker_count": 1,
+            "product": "Bisoprolol Tablets BP 5 mg",
+            "lot_number": "N/A"
         }
     },
     {
-        "id": "20251028123743978293",
-        "timestamp": "2025-10-28 12:37:43",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
+        "id": "20251106134957024619",
+        "timestamp": "2025-11-06 13:49:57",
+        "change_type": "ALLOCATION_DELETED",
+        "allocation_date": "2025-11-05",
         "shift_time": "Evening",
         "user": "Admin",
         "details": {
-            "processes_allocated": 1,
-            "machines_allocated": 0,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 32,
-            "group": "Group B"
+            "allocation_name": "CLOSE T - DRUMS / FBD-OLD",
+            "workers": [
+                "Sanjeewani",
+                "Ravindu",
+                "Dinushka",
+                "Nuwan"
+            ],
+            "worker_count": 4,
+            "product": "Paracetamol Tablets BP 500 mg",
+            "lot_number": "N/A"
         }
     },
     {
-        "id": "20251028123747650584",
-        "timestamp": "2025-10-28 12:37:47",
+        "id": "20251106135011172727",
+        "timestamp": "2025-11-06 13:50:11",
         "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
-        "shift_time": "Evening",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 2,
-            "machines_allocated": 0,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 31,
-            "group": "Group B"
-        }
-    },
-    {
-<<<<<<< HEAD
-        "id": "20251028123756251184",
-        "timestamp": "2025-10-28 12:37:56",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
-        "shift_time": "Evening",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 3,
-            "machines_allocated": 0,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 30,
-            "group": "Group B"
-        }
-    },
-    {
-        "id": "20251028123759187704",
-        "timestamp": "2025-10-28 12:37:59",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
+        "allocation_date": "2025-11-05",
         "shift_time": "Evening",
         "user": "Admin",
         "details": {
             "processes_allocated": 4,
-            "machines_allocated": 0,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 29,
-            "group": "Group B"
-        }
-    },
-    {
-        "id": "20251028123802137735",
-        "timestamp": "2025-10-28 12:38:02",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
-        "shift_time": "Evening",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 5,
-            "machines_allocated": 0,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 28,
-            "group": "Group B"
-        }
-    },
-    {
-        "id": "20251028123804610655",
-        "timestamp": "2025-10-28 12:38:04",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
-        "shift_time": "Evening",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 6,
-            "machines_allocated": 0,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 27,
-            "group": "Group B"
-        }
-    },
-    {
-        "id": "20251028123806883137",
-        "timestamp": "2025-10-28 12:38:06",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
-        "shift_time": "Evening",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 7,
-            "machines_allocated": 0,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 26,
-            "group": "Group B"
-        }
-    },
-    {
-        "id": "20251028123809075130",
-        "timestamp": "2025-10-28 12:38:09",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
-        "shift_time": "Evening",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 8,
-            "machines_allocated": 0,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 25,
-            "group": "Group B"
-        }
-    },
-    {
-        "id": "20251028123811674896",
-        "timestamp": "2025-10-28 12:38:11",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
-        "shift_time": "Evening",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 9,
-            "machines_allocated": 0,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 24,
-            "group": "Group B"
-        }
-    },
-    {
-        "id": "20251028123814675093",
-        "timestamp": "2025-10-28 12:38:14",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
-        "shift_time": "Evening",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 9,
             "machines_allocated": 1,
             "total_workers_assigned": 0,
-            "unassigned_workers": 23,
-            "group": "Group B"
+            "unassigned_workers": 31,
+            "group": "Group A"
         }
     },
     {
-        "id": "20251028123817771378",
-        "timestamp": "2025-10-28 12:38:17",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
+        "id": "20251106135014207757",
+        "timestamp": "2025-11-06 13:50:14",
+        "change_type": "ALLOCATION_DELETED",
+        "allocation_date": "2025-11-05",
         "shift_time": "Evening",
         "user": "Admin",
         "details": {
-            "processes_allocated": 9,
-            "machines_allocated": 2,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 22,
-            "group": "Group B"
+            "allocation_name": "WEIGHING II",
+            "workers": [
+                "Isuru",
+                "Ranjaya"
+            ],
+            "worker_count": 2,
+            "product": "Bisoprolol Tablets BP 5 mg",
+            "lot_number": "N/A"
         }
     },
     {
-        "id": "20251028123820458947",
-        "timestamp": "2025-10-28 12:38:20",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
-        "shift_time": "Evening",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 9,
-            "machines_allocated": 3,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 21,
-            "group": "Group B"
-        }
-    },
-    {
-        "id": "20251028123823301380",
-        "timestamp": "2025-10-28 12:38:23",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
-        "shift_time": "Evening",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 9,
-            "machines_allocated": 4,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 20,
-            "group": "Group B"
-        }
-    },
-    {
-        "id": "20251028123825813028",
-        "timestamp": "2025-10-28 12:38:25",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
-        "shift_time": "Evening",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 9,
-            "machines_allocated": 5,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 19,
-            "group": "Group B"
-        }
-    },
-    {
-        "id": "20251028123828108916",
-        "timestamp": "2025-10-28 12:38:28",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
-        "shift_time": "Evening",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 9,
-            "machines_allocated": 6,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 18,
-            "group": "Group B"
-        }
-    },
-    {
-        "id": "20251028123830549678",
-        "timestamp": "2025-10-28 12:38:30",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
-        "shift_time": "Evening",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 9,
-            "machines_allocated": 7,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 17,
-            "group": "Group B"
-        }
-    },
-    {
-        "id": "20251028123833301470",
-        "timestamp": "2025-10-28 12:38:33",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
-        "shift_time": "Evening",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 9,
-            "machines_allocated": 8,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 16,
-            "group": "Group B"
-        }
-    },
-    {
-        "id": "20251028123836037639",
-        "timestamp": "2025-10-28 12:38:36",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
-        "shift_time": "Evening",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 9,
-            "machines_allocated": 9,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 15,
-            "group": "Group B"
-        }
-    },
-    {
-        "id": "20251028123838777314",
-        "timestamp": "2025-10-28 12:38:38",
+        "id": "20251106135017471668",
+        "timestamp": "2025-11-06 13:50:17",
         "change_type": "ALLOCATION_EDITED",
-        "allocation_date": "2025-10-28",
+        "allocation_date": "2025-11-05",
         "shift_time": "Evening",
         "user": "Admin",
         "details": {
-            "allocations_count": 18,
+            "allocations_count": 5,
             "allocations": {
-                "SIFTING I": 1,
-                "SIFTING II": 1,
-                "WEIGHING I": 1,
-                "WEIGHING II": 1,
-                "CLOSE T - DRUMS / FBD-OLD": 1,
-                "CLOSE T - DRUMS / FBD-NEW": 1,
-                "MILL & BLEND / WASH - 1500L": 1,
-                "WEIGH & BLEND / WASH - 1100L": 1,
-                "MILL & BLEND / WASH - 650L": 1,
-                "HT-2054-TAB 1": 1,
-                "HT-2055-TAB 2": 1,
-                "HT-2056-TAB 3": 1,
-                "HT-2057-TAB 4": 1,
-                "HT-2058-TAB 5": 1,
-                "KORSCH-TAB 6": 1,
-                "128-001": 1,
-                "129-001": 1,
-                "130-001[opposite to 1100L]": 1
+                "WEIGHING I": 2,
+                "WEIGHING II": 2,
+                "CLOSE T - DRUMS / FBD-OLD": 4,
+                "CLOSE T - DRUMS / FBD-NEW": 4,
+                "128-001": 1
             },
-            "total_assigned_workers": 18,
-            "unassigned_workers_count": 15,
+            "total_assigned_workers": 13,
+            "unassigned_workers_count": 31,
             "overtime_workers": 0,
-            "temp_workers": 3
+            "temp_workers": 0
         }
     },
     {
-        "id": "20251028123838791494",
-        "timestamp": "2025-10-28 12:38:38",
+        "id": "20251106135017473703",
+        "timestamp": "2025-11-06 13:50:17",
         "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-10-28",
+        "allocation_date": "2025-11-05",
         "shift_time": "Evening",
         "user": "Admin",
         "details": {
-            "processes_allocated": 9,
-            "machines_allocated": 9,
-            "total_workers_assigned": 0,
-            "unassigned_workers": 15,
-            "group": "Group B"
-=======
-        "id": "20251104090523995358",
-        "timestamp": "2025-11-04 09:05:23",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-11-04",
-        "shift_time": "Morning",
-        "user": "Admin",
-        "details": {
-            "processes_allocated": 1,
+            "processes_allocated": 4,
             "machines_allocated": 1,
             "total_workers_assigned": 0,
-            "unassigned_workers": 44,
+            "unassigned_workers": 31,
             "group": "Group A"
         }
     },
     {
-        "id": "20251104090527130147",
-        "timestamp": "2025-11-04 09:05:27",
-        "change_type": "ALLOCATION_CREATED",
-        "allocation_date": "2025-11-04",
+        "id": "20251106150625042410",
+        "timestamp": "2025-11-06 15:06:25",
+        "change_type": "ALLOCATION_DELETED",
+        "allocation_date": "2025-11-06",
         "shift_time": "Morning",
         "user": "Admin",
         "details": {
-            "processes_allocated": 1,
-            "machines_allocated": 1,
+            "allocation_name": "Binder Solution Preparation - NEW FBD",
+            "workers": [
+                "Shenal"
+            ],
+            "worker_count": 1,
+            "product": "Atorvastatin Tablets IP 10 mg (Blister)",
+            "lot_number": "N/A"
+        }
+    },
+    {
+        "id": "20251106150631756497",
+        "timestamp": "2025-11-06 15:06:31",
+        "change_type": "ALLOCATION_EDITED",
+        "allocation_date": "2025-11-06",
+        "shift_time": "Morning",
+        "user": "Admin",
+        "details": {
+            "allocations_count": 0,
+            "allocations": {},
+            "total_assigned_workers": 0,
+            "unassigned_workers_count": 44,
+            "overtime_workers": 0,
+            "temp_workers": 0
+        }
+    },
+    {
+        "id": "20251106150632170956",
+        "timestamp": "2025-11-06 15:06:32",
+        "change_type": "ALLOCATION_CREATED",
+        "allocation_date": "2025-11-06",
+        "shift_time": "Morning",
+        "user": "Admin",
+        "details": {
+            "processes_allocated": 0,
+            "machines_allocated": 0,
             "total_workers_assigned": 0,
             "unassigned_workers": 44,
             "group": "Group A"
->>>>>>> 4115510ed246f75298c85c9f9730169594d46d53
         }
     }
 ]
