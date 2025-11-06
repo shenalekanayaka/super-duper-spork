@@ -3,10 +3,264 @@
         "date": "2025-10-28",
         "shift_time": "Evening",
         "shift_group": "Group B",
-        "exported_at": "2025-10-28 10:40:47"
+        "exported_at": "2025-10-28 12:38:38"
     },
-    "processes": [],
-    "machines": [],
+    "processes": [
+        {
+            "name": "SIFTING I",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Chithra",
+                    "display_name": "Chithra",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "SIFTING II",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Hasindu",
+                    "display_name": "Hasindu",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "WEIGHING I",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Helen",
+                    "display_name": "Helen (Temp)",
+                    "is_overtime": false,
+                    "is_temp": true
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "WEIGHING II",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Jayatissa",
+                    "display_name": "Jayatissa",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "CLOSE T - DRUMS / FBD-OLD",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Deshapriya",
+                    "display_name": "Deshapriya",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "CLOSE T - DRUMS / FBD-NEW",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Jayalal",
+                    "display_name": "Jayalal",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "MILL & BLEND / WASH - 1500L",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Nimal",
+                    "display_name": "Nimal",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "WEIGH & BLEND / WASH - 1100L",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Danindu",
+                    "display_name": "Danindu (Temp)",
+                    "is_overtime": false,
+                    "is_temp": true
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "MILL & BLEND / WASH - 650L",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Prasanna",
+                    "display_name": "Prasanna",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        }
+    ],
+    "machines": [
+        {
+            "name": "HT-2054-TAB 1",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Gihan",
+                    "display_name": "Gihan",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "HT-2055-TAB 2",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Nisal",
+                    "display_name": "Nisal",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "HT-2056-TAB 3",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Pinsara",
+                    "display_name": "Pinsara",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "HT-2057-TAB 4",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Rukmal",
+                    "display_name": "Rukmal",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "HT-2058-TAB 5",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Ramanayaka",
+                    "display_name": "Ramanayaka",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "KORSCH-TAB 6",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Kulith",
+                    "display_name": "Kulith (Temp)",
+                    "is_overtime": false,
+                    "is_temp": true
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "128-001",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Sajith",
+                    "display_name": "Sajith",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "129-001",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Kushan",
+                    "display_name": "Kushan",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        },
+        {
+            "name": "130-001[opposite to 1100L]",
+            "product": "N/A",
+            "lot_number": "N/A",
+            "workers": [
+                {
+                    "name": "Shirantha",
+                    "display_name": "Shirantha",
+                    "is_overtime": false,
+                    "is_temp": false
+                }
+            ],
+            "worker_count": 1
+        }
+    ],
     "unassigned_workers": [
         {
             "name": "Ajith",
@@ -27,62 +281,14 @@
             "is_temp": false
         },
         {
-            "name": "Chithra",
-            "display_name": "Chithra",
-            "is_overtime": false,
-            "is_temp": false
-        },
-        {
-            "name": "Danindu",
-            "display_name": "Danindu (Temp)",
-            "is_overtime": false,
-            "is_temp": true
-        },
-        {
             "name": "Deshan",
             "display_name": "Deshan",
             "is_overtime": false,
             "is_temp": false
         },
         {
-            "name": "Deshapriya",
-            "display_name": "Deshapriya",
-            "is_overtime": false,
-            "is_temp": false
-        },
-        {
-            "name": "Gihan",
-            "display_name": "Gihan",
-            "is_overtime": false,
-            "is_temp": false
-        },
-        {
-            "name": "Hasindu",
-            "display_name": "Hasindu",
-            "is_overtime": false,
-            "is_temp": false
-        },
-        {
-            "name": "Helen",
-            "display_name": "Helen (Temp)",
-            "is_overtime": false,
-            "is_temp": true
-        },
-        {
             "name": "Isika",
             "display_name": "Isika",
-            "is_overtime": false,
-            "is_temp": false
-        },
-        {
-            "name": "Jayalal",
-            "display_name": "Jayalal",
-            "is_overtime": false,
-            "is_temp": false
-        },
-        {
-            "name": "Jayatissa",
-            "display_name": "Jayatissa",
             "is_overtime": false,
             "is_temp": false
         },
@@ -93,56 +299,8 @@
             "is_temp": false
         },
         {
-            "name": "Kulith",
-            "display_name": "Kulith (Temp)",
-            "is_overtime": false,
-            "is_temp": true
-        },
-        {
-            "name": "Kushan",
-            "display_name": "Kushan",
-            "is_overtime": false,
-            "is_temp": false
-        },
-        {
             "name": "Nayanjith",
             "display_name": "Nayanjith",
-            "is_overtime": false,
-            "is_temp": false
-        },
-        {
-            "name": "Nimal",
-            "display_name": "Nimal",
-            "is_overtime": false,
-            "is_temp": false
-        },
-        {
-            "name": "Nisal",
-            "display_name": "Nisal",
-            "is_overtime": false,
-            "is_temp": false
-        },
-        {
-            "name": "Pinsara",
-            "display_name": "Pinsara",
-            "is_overtime": false,
-            "is_temp": false
-        },
-        {
-            "name": "Prasanna",
-            "display_name": "Prasanna",
-            "is_overtime": false,
-            "is_temp": false
-        },
-        {
-            "name": "Ramanayaka",
-            "display_name": "Ramanayaka",
-            "is_overtime": false,
-            "is_temp": false
-        },
-        {
-            "name": "Rukmal",
-            "display_name": "Rukmal",
             "is_overtime": false,
             "is_temp": false
         },
@@ -153,20 +311,8 @@
             "is_temp": false
         },
         {
-            "name": "Sajith",
-            "display_name": "Sajith",
-            "is_overtime": false,
-            "is_temp": false
-        },
-        {
             "name": "Saman",
             "display_name": "Saman",
-            "is_overtime": false,
-            "is_temp": false
-        },
-        {
-            "name": "Shirantha",
-            "display_name": "Shirantha",
             "is_overtime": false,
             "is_temp": false
         },

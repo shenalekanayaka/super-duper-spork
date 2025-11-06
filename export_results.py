@@ -217,37 +217,33 @@ class ResultsExporter:
         # Create custom styles
         title_style = ParagraphStyle(
             'CustomTitle',
-            parent=styles['Heading1'],
-            fontSize=24,
+            parent=styles['Heading2'],
+            fontSize=18,
             textColor=colors.HexColor('#2c3e50'),
-            spaceAfter=30,
+            spaceAfter=2,
             alignment=TA_CENTER
         )
         
         heading_style = ParagraphStyle(
             'CustomHeading',
-            parent=styles['Heading2'],
-            fontSize=16,
+            parent=styles['Heading3'],
+            fontSize=12,
             textColor=colors.HexColor('#2c3e50'),
-            spaceAfter=12,
-            spaceBefore=20
+            spaceAfter=3,
+            spaceBefore=3
         )
-        
-        # Add title
-        story.append(Paragraph("Worker Allocation Report", title_style))
-        story.append(Spacer(1, 0.2*inch))
-        
-
+            
         # Add report info - use selected date
         if self.state.selected_date:
             date_str = datetime.strptime(self.state.selected_date, "%Y-%m-%d").strftime("%B %d, %Y")
         else:
             date_str = datetime.now().strftime("%B %d, %Y")
 
-        info_text = f"<b>Date:</b> {date_str}<br/><b>Shift:</b> {self.state.shift_time}<br/><b>Group:</b> {self.state.shift_group}"
+        # Combine title and info on same line
+        combined_text = f"<b>Worker Allocation Report | Date: {date_str} | Shift: {self.state.shift_time} | Group: {self.state.shift_group}</b>"
 
-        story.append(Paragraph(info_text, styles['Normal']))
-        story.append(Spacer(1, 0.3*inch))
+        story.append(Paragraph(combined_text, title_style))
+        story.append(Spacer(1, 0.15*inch))
         
         # Add Production Processes section
         self._add_processes_to_pdf(story, heading_style, styles)
@@ -270,7 +266,7 @@ class ResultsExporter:
         
         # Section heading
         story.append(Paragraph("Production Processes", heading_style))
-        story.append(Spacer(1, 0.1*inch))
+        story.append(Spacer(1, 0.05*inch))
         
         # Table data
         data = [['Process', 'Product', 'Lot Number', 'Workers', 'Count']]
@@ -299,11 +295,11 @@ class ResultsExporter:
         # Style the table
         table.setStyle(TableStyle([
             # Header row styling
-            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor("#34db98")),
+            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#9b59b6')),
             ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
             ('ALIGN', (0, 0), (-1, 0), 'CENTER'),
             ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
-            ('FONTSIZE', (0, 0), (-1, 0), 11),
+            ('FONTSIZE', (0, 0), (-1, 0), 9),
             ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
             
             # Data rows styling
@@ -322,7 +318,7 @@ class ResultsExporter:
         ]))
         
         story.append(table)
-        story.append(Spacer(1, 0.3*inch))
+        story.append(Spacer(1, 0.05*inch))
 
     def _add_machines_to_pdf(self, story, heading_style, styles):
         """Add compression machines section to PDF"""
@@ -332,7 +328,7 @@ class ResultsExporter:
         
         # Section heading
         story.append(Paragraph("Compression Machines", heading_style))
-        story.append(Spacer(1, 0.1*inch))
+        story.append(Spacer(1, 0.05*inch))
         
         # Table data
         data = [['Machine', 'Product', 'Lot Number', 'Workers', 'Count']]  # Changed 'Process' to 'Machine'
@@ -385,7 +381,7 @@ class ResultsExporter:
         ]))
         
         story.append(table)
-        story.append(Spacer(1, 0.3*inch))
+        story.append(Spacer(1, 0.1*inch))
 
     def _add_unassigned_to_pdf(self, story, heading_style, styles):
             """Add unassigned workers section to PDF"""
@@ -394,7 +390,7 @@ class ResultsExporter:
             
             # Section heading
             story.append(Paragraph("Unassigned Workers", heading_style))
-            story.append(Spacer(1, 0.1*inch))
+            story.append(Spacer(1, 0.05*inch))
             
             # Get unassigned workers
             unassigned = ", ".join([
